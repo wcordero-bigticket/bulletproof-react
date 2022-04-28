@@ -4,7 +4,7 @@ import { Head } from '../Head';
 
 test('should add proper page title and meta description', async () => {
   const title = 'Hello World';
-  const titleSuffix = ' | Bulletproof React';
+  const titleSuffix = ' | Bigticket Platform';
   const description = 'This is a description';
 
   render(<Head title={title} description={description} />);

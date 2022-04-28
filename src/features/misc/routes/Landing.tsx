@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router';
 
-import logo from '@/assets/logo.svg';
+import logo from '@/assets/img/logo.svg';
 import { Button } from '@/components/Elements';
 import { Head } from '@/components/Head';
 import { useAuth } from '@/lib/auth';

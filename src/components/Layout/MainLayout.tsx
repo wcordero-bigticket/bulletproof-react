@@ -7,11 +7,12 @@ import {
   UsersIcon,
   XIcon,
 } from '@heroicons/react/outline';
+import Icon from '@mui/material/Icon';
 import clsx from 'clsx';
 import * as React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
-import logo from '@/assets/logo.svg';
+import logo from '@/assets/img/logo.svg';
 import { useAuth } from '@/lib/auth';
 import { useAuthorization, ROLES } from '@/lib/authorization';
 
@@ -79,6 +80,7 @@ const UserNavigation = () => {
       },
     },
   ].filter(Boolean) as UserNavigationItem[];
+  const { user } = useAuth();
 
   return (
     <Menu as="div" className="ml-3 relative">
@@ -88,6 +90,11 @@ const UserNavigation = () => {
             <Menu.Button className="max-w-xs  bg-gray-200 p-2 flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
               <span className="sr-only">Open user menu</span>
               <UserIcon className="h-8 w-8 rounded-full" />
+
+              <span className="mx-2">
+                {user?.firstName} {user?.lastName}
+              </span>
+              <Icon>expand_more</Icon>
             </Menu.Button>
           </div>
           <Transition
@@ -222,7 +229,7 @@ const Logo = () => {
   return (
     <Link className="flex items-center text-white" to=".">
       <img className="h-8 w-auto" src={logo} alt="Workflow" />
-      <span className="text-xl text-white font-semibold">Bulletproof React</span>
+      <span className="text-xl text-white font-semibold">Bigticket Platform</span>
     </Link>
   );
 };
