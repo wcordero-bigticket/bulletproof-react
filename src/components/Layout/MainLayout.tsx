@@ -11,7 +11,7 @@ import clsx from 'clsx';
 import * as React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
-import logo from '@/assets/logo.svg';
+import logo from '@/assets/img/logo.svg';
 import { useAuth } from '@/lib/auth';
 import { useAuthorization, ROLES } from '@/lib/authorization';
 
@@ -222,7 +222,7 @@ const Logo = () => {
   return (
     <Link className="flex items-center text-white" to=".">
       <img className="h-8 w-auto" src={logo} alt="Workflow" />
-      <span className="text-xl text-white font-semibold">Bulletproof React</span>
+      <span className="text-xl text-white font-semibold">Bigticket Platform</span>
     </Link>
   );
 };

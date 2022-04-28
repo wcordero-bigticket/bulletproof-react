@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import logo from '@/assets/logo.svg';
+import logo from '@/assets/img/logo.svg';
 import { Link } from '@/components/Elements';
 import { Head } from '@/components/Head';
 
